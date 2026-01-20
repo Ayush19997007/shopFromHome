@@ -1,0 +1,49 @@
+services:
+ mysql-container:
+  image: mysql:latest
+  environment:
+   MYSQL_ROOT_PASSWORD: root
+  ports:
+   - "3306:3306"
+  volumes:
+   - ./mysql-init:/docker-entrypoint-initdb.d
+  networks:
+   - ecommerce-network
+  hostname: mysql-host-productsmicroservice
+
+ products-microservice:
+  image: ayush100docker/ecommerce-dotnet-products-microsrvc:v1.0
+  environment:
+   MYSQL_HOST: mysql-host-productsmicroservice
+   MYSQL_PASSWORD: root
+  ports:
+   - "8080:8080"
+  networks:
+   - ecommerce-network
+   
+ postgres-container:
+  image: postgres:16.1
+  environment:
+   - POSTGRES_USER=postgres
+   - POSTGRES_PASSWORD=Ayush@100
+   - POSTGRES_DB=eCommerceUsersDB
+  ports:
+   - "5432:5432"
+  volumes:
+   - ./postgres-init:/docker-entrypoint-initdb.d
+  networks:
+   - ecommerce-network
+
+ users-microservice:
+  image: ayush100docker/ecommerce-dotnet-usersmicrosrvc:v1.0
+  environment:
+   - POSTGRES_HOST=postgres-container
+   - POSTGRES_PASSWORD=Ayush@100
+  ports:
+   - "9090:9090"
+  networks:
+   - ecommerce-network
+
+networks:
+ ecommerce-network:
+  driver: bridge
