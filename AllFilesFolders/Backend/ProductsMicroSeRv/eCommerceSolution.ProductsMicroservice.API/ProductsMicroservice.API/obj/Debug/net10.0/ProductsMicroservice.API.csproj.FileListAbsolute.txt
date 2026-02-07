@@ -69,3 +69,4 @@ D:\MicroServiceProjectDotNet\AllFilesFolders\Backend\ProductsMicroSeRv\eCommerce
 D:\MicroServiceProjectDotNet\AllFilesFolders\Backend\ProductsMicroSeRv\eCommerceSolution.ProductsMicroservice.API\ProductsMicroservice.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\MicroServiceProjectDotNet\AllFilesFolders\Backend\ProductsMicroSeRv\eCommerceSolution.ProductsMicroservice.API\ProductsMicroservice.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\MicroServiceProjectDotNet\AllFilesFolders\Backend\ProductsMicroSeRv\eCommerceSolution.ProductsMicroservice.API\ProductsMicroservice.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\MicroServiceProjectDotNet\AllFilesFolders\Backend\ProductsMicroSeRv\eCommerceSolution.ProductsMicroservice.API\ProductsMicroservice.API\obj\Debug\net10.0\ProductsMicroservice.API.sourcelink.json
