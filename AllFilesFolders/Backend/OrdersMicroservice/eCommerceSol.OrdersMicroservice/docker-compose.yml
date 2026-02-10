@@ -11,6 +11,8 @@ services:
       - MONGODB_DATABASE=OrdersDatabase
       - UsersMicroserviceName=users-microservice
       - UsersMicroservicePort=9090
+      - ProductsMicroserviceName=products-microservice
+      - ProductsMicroservicePort=8080
     ports:
       - "7000:8080"
     networks:
@@ -40,7 +42,7 @@ services:
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
     ports:
-      - "6000:8080"
+      - "6001:8080"
     networks:
       - products-mysql-network
       - ecommerce-network 

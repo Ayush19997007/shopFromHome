@@ -63,8 +63,10 @@ services:
       MONGODB_HOST: mongodb-container
       MONGODB_PORT: "27017"
       NUGET_FALLBACK_PACKAGES: /.nuget/fallbackpackages
+      ProductsMicroserviceName: products-microservice
+      ProductsMicroservicePort: "8080"
       UsersMicroserviceName: users-microservice
-      UsersMicroservicePort: "9000"
+      UsersMicroservicePort: "9090"
     image: ordersmicroserviceapi:dev
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages --additionalProbingPath /.nuget/fallbackpackages  "/app/bin/Debug/net10.0/OrdersMicroservice.API.dll"'
@@ -189,7 +191,7 @@ services:
     ports:
       - mode: ingress
         target: 8080
-        published: "6000"
+        published: "6001"
         protocol: tcp
   users-microservice:
     depends_on:
